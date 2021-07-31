@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-interface QuestionProps {
+type QuestionProps = {
   title: string;
   info: string;
-}
+};
 const SingleQuestion: React.FC<QuestionProps> = ({ title, info }) => {
-  const [showInfo, setShowInfo] = useState(false);
+  const [showInfo, setShowInfo] = useState<boolean>(false);
   const btnClicked = () => {
     let newShowInfo: boolean = !showInfo;
     setShowInfo(newShowInfo);
