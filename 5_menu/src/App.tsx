@@ -3,7 +3,6 @@ import "./App.css";
 import Categories from "./Categories";
 import items from "./data";
 import Menu from "./Menu";
-
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
@@ -15,7 +14,7 @@ function App() {
           <div className="underline"></div>
         </div>
         <Categories />
-        <Menu />
+        <Menu items={menuItems} />
       </section>
     </main>
   );
